@@ -1,4 +1,4 @@
-package com.bridgelab.program.common;
+package com.bridgelabz.program.common;
 
 public class SmollestArrayExample {
 	public static int getSmallest(int[] a, int total) {
