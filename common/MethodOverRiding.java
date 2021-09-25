@@ -22,7 +22,7 @@ public class MethodOverRiding {
 		MethodOverRiding mor = new MethodOverRiding();		
 		mor.Show();
 		
-		Test t = new Test();
-		t.Show();
+		Test02 t = new Test02();
+//		t.Show();
 	}	
 }

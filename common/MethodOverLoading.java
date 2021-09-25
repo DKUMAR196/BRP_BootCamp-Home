@@ -9,8 +9,7 @@ public class MethodOverLoading {
         // for loop for printing the elements of array
         for (Integer i : arr)
             System.out.print(i + " ");
-        	System.out.println();
-		
+        	System.out.println();		
 	}
 	
 	public static void printArray(String[] arr)

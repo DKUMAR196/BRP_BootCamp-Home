@@ -18,6 +18,7 @@ public class SmollestArrayExample {
 		return a[0];
 		//return b[total-1];
 	}
+	
 	public static void main(String[] args)
 	{
 		int a[] = {6, 2, 9, 1, 5};
