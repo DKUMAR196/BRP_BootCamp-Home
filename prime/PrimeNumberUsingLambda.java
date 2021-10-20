@@ -1,22 +1,34 @@
 package com.bridgelabz.prime;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Scanner;
 
-public class PrimeNumberUsingLambda {
+interface Prime{
+	void checkPrime(int num);	
+}
+
+public class PrimeNumberUsingLambda {	
 	public static void main(String[] args) {
-		List<Integer> list = List.of(3,4,5,6,7,8);
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number: ");
+		int num = sc.nextInt();
+		sc.close();
 		
-		List<Integer> newList = new ArrayList<>();
-//		for(Integer i : list) {
-//			if(i%2==0) {
-//				newList.add(i);
-//			}
-//		}
-//		System.out.println(list);
-//		System.out.println(newList);
-		List<Integer> evenList = list.stream().filter(i->i%2==0).collect(Collectors.toList());
-		System.out.println(evenList);
+		Prime p;
+		p = (x)->{
+			int temp = 0;
+			for(int i = 2; i<=num-1; i++) {
+				if(num%i==0) {
+					temp = temp + 1;
+				}
+			}
+			if(temp==0 && num!=1) {
+				System.out.println(num+ " the number is prime: ");
+			}
+			else 
+			{
+				System.out.println(num+ " number is not prime: ");
+			}
+		};	
+		p.checkPrime(num);
 	}
 }
