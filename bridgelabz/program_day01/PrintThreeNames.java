@@ -3,21 +3,39 @@ package com.bridgelabz.program_day01;
 import java.util.Scanner;
 
 public class PrintThreeNames {
+	static String wordReverse(String str)
+	{
+	    int i = str.length() - 1;
+	    int start, end = i + 1;
+	    String result = "";
+	     
+	    while(i >= 0)
+	    {
+	        if(str.charAt(i) == ' ')
+	        {
+	            start = i + 1;
+	            while(start != end)
+	            result += str.charAt(start++);
+	             
+	            result += ' ';
+	             
+	            end = i;
+	        }
+	        i--;
+	    }
+	     
+	    start = 0;
+	    while(start != end)
+	        result += str.charAt(start++);
+	     
+	    return result;
+	   }
+
 	public static void main(String[] args) {
-		Scanner cs = new Scanner(System.in);
-        System.out.println("Enter the size of an array: ");
-
-        int size;
-        size = cs.nextInt();
-        String names[] = new String[size];
-        System.out.println("Enter elements of an array: ");
-
-        for (int i=0;i<size;i++)
-        {
-            names[i]= cs.nextLine();
-        }
-        System.out.println("After the reverse of an array is: ");
-        for (int i=size-1;i>=0;i--)
-            System.out.print(" " +names[i]+ " ");		
+		Scanner sc = new Scanner(System.in);
+        System.out.println("Enter The string... ");
+         String str = sc.nextLine(); 
+         System.out.print(wordReverse(str));
+         sc.close();
 	}
 }
